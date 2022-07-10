@@ -1,0 +1,33 @@
+label {
+    color: black;
+}
+
+#divAlerte {
+    margin-top: 30px;
+}
+
+#reponseVide {
+    color: red;
+}
+
+#reponseFausse {
+    color: red;
+}
+
+img {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
+#separation1 {
+    height: 35%;
+}
+
+#separation2 {
+    height: 15px;
+}

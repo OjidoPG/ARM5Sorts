@@ -1,0 +1,11 @@
+.jumbotron {
+    background-color: var(--main-aec-color);
+}
+
+.display-4 {
+    margin-top: 40px;
+}
+
+#separation {
+    height: 50px;
+}

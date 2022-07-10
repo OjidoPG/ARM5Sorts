@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: var(--main-lieux-color);
+}
+
+.display-4 {
+    margin-top: 40px;
+}
+
+.card {
+    width: 18rem;
+    height: 20rem;
+}
+
+.card-body {
+    background-color: #E4FBDF;
+}

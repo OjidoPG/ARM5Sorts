@@ -1,0 +1,28 @@
+.jumbotron {
+    background-color: var(--main-bibliotheque-color);
+}
+
+.display-4 {
+    margin-top: 40px;
+}
+
+.fa-circle-check {
+    color: green;
+}
+
+#pointsSumGagnes {
+    color: green;
+}
+
+#pointsTexteGagnes {
+    color: green;
+}
+
+i:hover {
+    transition: all 0.3s linear;
+    transform: scale(1.5);
+}
+
+.fa-circle-check{
+    color: var(--main-bibliotheque-color);
+}

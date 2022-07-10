@@ -1,0 +1,13 @@
+:root {
+    --main-bg-color: #F2F6F4;
+    --main-maisons-color: #f0ad4e;
+    --main-sorts-color: #5bc0de;
+    --main-lieux-color: #5cb85c;
+    --main-aec-color: #adb5bd;
+    --main-bibliotheque-color: #d9534f;
+    --main-org-color: #343a40;
+}
+
+body {
+    background-color: var(--main-bg-color);
+}

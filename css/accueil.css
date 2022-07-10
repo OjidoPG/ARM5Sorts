@@ -1,0 +1,97 @@
+#separation {
+    height: 10px;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    transition: 0.5s;
+    color: black;
+}
+
+.jumbotron {
+    background-color: var(--main-bg-color);
+}
+
+.example1 {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.example1 {
+    position: fixed;
+}
+
+.embleme {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.rotate:hover {
+    animation: rotation 4s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.example1 h5 {
+    color: darkred;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 30px;
+    text-align: right;
+    /* Starting position */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    -moz-animation: example1 20s linear infinite;
+    -webkit-animation: example1 20s linear infinite;
+    animation: example1 20s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes example1 {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes example1 {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes example1 {
+    0% {
+        -moz-transform: translateX(100%); /* Firefox bug fix */
+        -webkit-transform: translateX(100%); /* Firefox bug fix */
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%); /* Firefox bug fix */
+        -webkit-transform: translateX(-100%); /* Firefox bug fix */
+        transform: translateX(-100%);
+    }
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

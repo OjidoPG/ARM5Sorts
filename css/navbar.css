@@ -1,0 +1,31 @@
+#logo {
+    width: 30px;
+}
+
+#maisons {
+    color: var(--main-maisons-color);
+}
+
+#sorts {
+    color: var(--main-sorts-color);
+}
+
+#lieux {
+    color: var(--main-lieux-color);
+}
+
+#sorts {
+    color: var(--main-sorts-color);
+}
+
+#aec {
+    color: var(--main-aec-color);
+}
+
+#bibliotheque {
+    color: var(--main-bibliotheque-color);
+}
+
+#organigramme{
+    color: var(--main-org-color); !important;
+}

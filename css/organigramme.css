@@ -1,0 +1,52 @@
+.jumbotron {
+    background-color: var(--main-org-color);
+}
+
+.display-4 {
+    margin-top: 40px;
+}
+
+.organigrammeColorFont {
+    color: white;
+}
+
+.btn-p {
+    background-color: var(--main-bg-color);
+}
+
+.btn-p:hover {
+    background-color: var(--main-bg-color);
+    animation: pulse 1s infinite;
+    transition: .3s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.imgOrganigramme {
+    height: 150px;
+    width: 150px;
+}
+
+.nav-pills > a {
+    background-color: var(--main-bg-color);
+}
+
+.nav-pills > .active {
+    background-color: blueviolet !important;
+}
+
+hr {
+    border: 0;
+    background-color: #fff;
+    border-top: 1px dashed #8c8c8c;
+}

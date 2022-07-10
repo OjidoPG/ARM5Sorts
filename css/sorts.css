@@ -1,0 +1,11 @@
+.jumbotron {
+    background-color: var(--main-sorts-color);
+}
+
+.display-4 {
+    margin-top: 40px;
+}
+
+#sortsDatatable {
+    width: 100%;
+}
