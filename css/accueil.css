@@ -1,46 +1,90 @@
+/* Jumbotron */
+.jumbotron {
+    background-color: var(--main-bg-color);
+}
+
 #separation {
     height: 10px;
 }
 
+/* Gestion des boutons */
 .btn {
     height: 200px;
     width: 200px;
     transition: 0.5s;
     color: black;
-}
-
-.jumbotron {
     background-color: var(--main-bg-color);
 }
 
-.example1 {
-    height: 50px;
-    overflow: hidden;
-    position: relative;
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: white;
 }
 
-.example1 {
-    position: fixed;
+.btnMaisons{
+    border-color: var(--main-maisons-color);
+}
+.btnMaisons:hover{
+    background-color: var(--main-maisons-color);
 }
 
+.btnSorts{
+    border-color: var(--main-sorts-color);
+}
+.btnSorts:hover{
+    background-color: var(--main-sorts-color);
+}
+
+.btnLieux{
+    border-color: var(--main-lieux-color);
+}
+.btnLieux:hover{
+    background-color: var(--main-lieux-color);
+}
+
+.btnAetC{
+    border-color: var(--main-aec-color);
+}
+.btnAetC:hover{
+    background-color: var(--main-aec-color);
+}
+
+.btnBibli{
+    border-color: var(--main-bibliotheque-color);
+}
+.btnBibli:hover{
+    background-color: var(--main-bibliotheque-color);
+}
+
+.btnOrga{
+    border-color: var(--main-org-color);
+}
+.btnOrga:hover{
+    background-color: var(--main-org-color);
+}
+
+.btnPerso{
+    border-color: var(--main-perso-color);
+}
+.btnPerso:hover{
+    background-color: var(--main-perso-color);
+}
+
+.btnBack{
+    border-color: var(--main-back-color);
+}
+.btnBack:hover{
+    background-color: var(--main-back-color);
+}
+
+/* Gestion des emblêmes */
 .embleme {
     height: 150px;
     border-radius: 50%;
 }
 
-.rotate:hover {
-    animation: rotation 4s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(359deg);
-    }
-}
-
+/* Gestion du texte défilant */
 .example1 h5 {
     color: darkred;
     position: absolute;
@@ -59,7 +103,16 @@
     animation: example1 20s linear infinite;
 }
 
-/* Move it (define the animation) */
+.example1 {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.example1 {
+    position: fixed;
+}
+
 @-moz-keyframes example1 {
     0% {
         -moz-transform: translateX(100%);
@@ -89,9 +142,4 @@
         -webkit-transform: translateX(-100%); /* Firefox bug fix */
         transform: translateX(-100%);
     }
-}
-
-.btn:hover {
-    cursor: pointer;
-    transform: scale(1.1);
 }

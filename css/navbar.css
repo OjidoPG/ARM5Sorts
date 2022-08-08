@@ -27,5 +27,13 @@
 }
 
 #organigramme{
-    color: var(--main-org-color); !important;
+    color: var(--main-org-color);
+}
+
+#personnage{
+    color: var(--main-perso-color);
+}
+
+#background{
+    color: var(--main-back-color);
 }

@@ -1,6 +1,5 @@
 <?php
 include("BDD.php");
-session_start();
 
 class Read
 {
@@ -14,15 +13,17 @@ class Read
         $identifiant = htmlspecialchars($identifiant);
         $mdp = htmlspecialchars($mdp);
         $bdd = BDD::getInstance();
-        $reponse = $bdd->prepare('SELECT mdpUtilisateur FROM utilisateur WHERE identifiantUtilisateur = "' . $identifiant . '"');
+        $reponse = $bdd->prepare('SELECT * FROM utilisateur WHERE identifiantUtilisateur = "' . $identifiant . '"');
         $reponse->execute();
         $tab = $reponse->fetch();
         BDD::deconnexion($reponse);
         if (empty($tab)) {
             return false;
         } else {
-            $_SESSION['connect'] = '1';
-            return password_verify($mdp, $tab[0]);
+            session_start();
+            $_SESSION["idUtilisateur"]=$tab["idUtilisateur"];
+            $_SESSION["nomUtilisateur"]=$tab["nomUtilisateur"];
+            return password_verify($mdp, $tab["mdpUtilisateur"]);
         }
     }
 
@@ -221,6 +222,19 @@ INNER JOIN versionsort v ON s.idVersionSort=v.idVersionSort";
         }
         $bdd = BDD::getInstance();
         $reponse = $bdd->prepare($requete);
+        $reponse->execute();
+        $tab = $reponse->fetchAll();
+        BDD::deconnexion($reponse);
+        return $tab;
+    }
+
+    /**
+     * @param $idUtilisateur
+     * @return array|false
+     */
+    public function readPersonnage ($idUtilisateur){
+        $bdd = BDD::getInstance();
+        $reponse = $bdd->prepare('SELECT mage, compagnon FROM utilisateur where idUtilisateur = "' . $idUtilisateur . '"');
         $reponse->execute();
         $tab = $reponse->fetchAll();
         BDD::deconnexion($reponse);

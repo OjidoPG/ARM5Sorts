@@ -14,6 +14,11 @@
         <li class="nav-item active"><a id="aec" class="nav-link waves-effect waves-light" href="ArtsEtCompetences.php">Arts et Compétences</a></li>
         <li class="nav-item active"><a id="bibliotheque" class="nav-link waves-effect waves-light" href="Bibliotheque.php">Bibliotheque</a></li>
         <li class="nav-item active"><a id="organigramme" class="nav-link waves-effect waves-light" href="Organigramme.php">Organigramme</a></li>
+        <li class="nav-item active"><a id="personnage" class="nav-link waves-effect waves-light" href="Personnage.php">Personnage</a></li>
+        <li class="nav-item active"><a id="background" class="nav-link waves-effect waves-light" href="Background.php">Background</a></li>
     </ul>
 </nav>
 
+<script>
+
+</script>
