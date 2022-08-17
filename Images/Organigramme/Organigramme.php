@@ -149,7 +149,7 @@ include("Shared/navbar.php");
                                     data-toggle="collapse"
                                     data-target="#beranger"
                                     aria-expanded="false" aria-controls="collapseExample">
-                                <img class="imgOrganigramme" src="../Images/Organigramme/Beranger.png" alt="">
+                                <img class="imgOrganigramme" src="../Images/Organigramme/Béranger.png" alt="">
                             </button>
                         </div>
                         <div class="col-md-12 text-center">

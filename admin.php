@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (empty($_SESSION["idUtilisateur"])){
+    header("Location:erreur.php");
+}
 include("View/Shared/headerSansSession.php");
 include("Model/Read.php");
 $read = new Read();

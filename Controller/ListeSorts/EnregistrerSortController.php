@@ -6,5 +6,6 @@ if (isset ($_POST ['nomSort']) && isset ($_POST ['techniqueSort']) && isset ($_P
     $create = new Create();
     $ok = $create->EnregistrerSort($_POST ['nomSort'], intval($_POST ['techniqueSort']), intval($_POST ['formeSort']), intval($_POST ['niveauSort']), intval($_POST ['porteeSort']),
         intval($_POST ['dureeSort']), intval($_POST ['cibleSort']), intval($_POST ['typeSort']), intval($_POST ['versionSort']), $_POST ['descriptionSort']);
+    header("Location:../../admin.php");
 }
 

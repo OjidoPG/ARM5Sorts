@@ -22,61 +22,76 @@ include("Shared/header.php");
             <div class="col-md-3 rotate">
                 <img class="embleme" src="../Images/EmblêmeAlliance.png" alt="">
             </div>
+            <?php
+            if ($_SESSION["idUtilisateur"]==2){
+                ?>
+            <div>
+                <input type="button" name="Administration" value="Administration" onclick="self.location.href='../admin.php'">
+            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
-    <!-- Séparation entre le jumbotron et les boutons -->
-    <div class="row" id="separation"></div>
 
     <!-- Boutons -->
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a href="Maisons.php">
                     <button type="button" class="btn btnMaisons">Maisons
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a href="Sorts.php">
                     <button type="button" class="btn btnSorts">Sorts
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a href="Lieux.php">
                     <button type="button" class="btn btnLieux">Lieux
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-md-4">
                 <a href="ArtsEtCompetences.php">
                     <button type="button" class="btn btnAetC">Arts et compétences
                     </button>
                 </a>
             </div>
-        </div>
-        <br>
-        <br>
-        <div class="row text-center">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a href="Bibliotheque.php">
                     <button type="button" class="btn btnBibli">Bibliothèque
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <a href="Organigramme.php">
                     <button type="button" class="btn btnOrga">Organigramme
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+        </div>
+        <br>
+        <div class="row text-center">
+            <div class="col-md-4">
                 <a href="Personnage.php">
                     <button type="button" class="btn btnPerso">Personnage
                     </button>
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
+                <a href="Projets.php">
+                    <button type="button" class="btn btnProjets">Projets
+                    </button>
+                </a>
+            </div>
+            <div class="col-md-4">
                 <a href="Background.php">
                     <button type="button" class="btn btnBack">Background
                     </button>

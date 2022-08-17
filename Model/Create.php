@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("BDD.php");
 
 /**
@@ -56,6 +57,42 @@ VALUES (:nomUtilisateur, :prenomUtilisateur, :identifiantUtilisateur, :mdpUtilis
             'prenomUtilisateur' => $prenomUtilisateur,
             'identifiantUtilisateur' => $identifiantUtilisateur,
             'mdpUtilisateur' => password_hash($mdpUtilisateur, PASSWORD_DEFAULT)
+        ));
+        BDD::deconnexion($reponse);
+    }
+
+    /**
+     * @param $projets
+     * @return void
+     */
+    public function EnregistrerProjetsAlliance($projets)
+    {
+        $bdd = BDD::getInstance();
+        $reponse = $bdd->prepare("INSERT INTO `projets`(`idUtilisateur`, `Type`, `Projets`, `archive`) 
+VALUES (:idUtilisateur,:Type,:Projets,:archive)");
+        $reponse->execute(array(
+            'idUtilisateur' => $_SESSION["idUtilisateur"],
+            'Type' => 1,
+            'Projets' => $projets,
+            'archive' => 0
+        ));
+        BDD::deconnexion($reponse);
+    }
+
+    /**
+     * @param $projets
+     * @return void
+     */
+    public function EnregistrerProjetsPersonnel($projets)
+    {
+        $bdd = BDD::getInstance();
+        $reponse = $bdd->prepare("INSERT INTO `projets`(`idUtilisateur`, `Type`, `Projets`, `archive`) 
+VALUES (:idUtilisateur,:Type,:Projets,:archive)");
+        $reponse->execute(array(
+            'idUtilisateur' => $_SESSION["idUtilisateur"],
+            'Type' => 0,
+            'Projets' => $projets,
+            'archive' => 0
         ));
         BDD::deconnexion($reponse);
     }

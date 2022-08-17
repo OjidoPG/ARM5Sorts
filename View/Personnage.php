@@ -80,7 +80,7 @@ if ($_SESSION["idUtilisateur"] != 2) {
             <br>
             <div class="text-center"><strong>Crotti</strong></div>
             <br>
-            <embed src="../Images/Personnage/Crotti/Béranger.pdf" width="1000" height="800">
+            <embed src="../Images/Personnage/Crotti/Beranger.pdf" width="1000" height="800">
             <br>
             <br>
             <div class="text-center"><strong>Daniel</strong></div>

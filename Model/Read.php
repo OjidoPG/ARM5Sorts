@@ -21,8 +21,8 @@ class Read
             return false;
         } else {
             session_start();
-            $_SESSION["idUtilisateur"]=$tab["idUtilisateur"];
-            $_SESSION["nomUtilisateur"]=$tab["nomUtilisateur"];
+            $_SESSION["idUtilisateur"] = $tab["idUtilisateur"];
+            $_SESSION["nomUtilisateur"] = $tab["nomUtilisateur"];
             return password_verify($mdp, $tab["mdpUtilisateur"]);
         }
     }
@@ -232,9 +232,41 @@ INNER JOIN versionsort v ON s.idVersionSort=v.idVersionSort";
      * @param $idUtilisateur
      * @return array|false
      */
-    public function readPersonnage ($idUtilisateur){
+    public function readPersonnage($idUtilisateur)
+    {
         $bdd = BDD::getInstance();
         $reponse = $bdd->prepare('SELECT mage, compagnon FROM utilisateur where idUtilisateur = "' . $idUtilisateur . '"');
+        $reponse->execute();
+        $tab = $reponse->fetchAll();
+        BDD::deconnexion($reponse);
+        return $tab;
+    }
+
+    /**
+     * @return array|false
+     */
+    public function chercherProjetsAlliance()
+    {
+        $bdd = BDD::getInstance();
+        $reponse = $bdd->prepare('SELECT u.nomUtilisateur, u.idUtilisateur, p.archive, p.Projets, p.idProjets FROM projets p 
+         INNER JOIN utilisateur u ON p.idUtilisateur = u.idUtilisateur
+         WHERE type=1');
+        $reponse->execute();
+        $tab = $reponse->fetchAll();
+        BDD::deconnexion($reponse);
+        return $tab;
+    }
+
+    /**
+     * @return array|false
+     */
+    public function chercherProjetsPersonnel($idUtilisateur)
+    {
+        $bdd = BDD::getInstance();
+        $reponse = $bdd->prepare('SELECT u.nomUtilisateur, u.idUtilisateur, p.archive, p.Projets, p.idProjets FROM projets p 
+         INNER JOIN utilisateur u ON p.idUtilisateur = u.idUtilisateur
+         WHERE u.idUtilisateur = "' . $idUtilisateur . '"                                                  
+         AND type=0');
         $reponse->execute();
         $tab = $reponse->fetchAll();
         BDD::deconnexion($reponse);
